@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input type="file" id="fileInput" onchange="previewFile()" />
+    <div id="fileList"></div>
+
+    <!-- The Modal -->
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>คุณต้องการลบไฟล์นี้หรือไม่?</p>
+        <button onclick="confirmDelete()">ยืนยัน</button>
+        <button onclick="closeModal()">ยกเลิก</button>
+      </div>
+    </div>
+
+    <!-- List of Deleted Files -->
+    <div id="deletedFiles"></div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
